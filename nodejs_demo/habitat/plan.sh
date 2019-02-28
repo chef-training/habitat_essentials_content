@@ -1,5 +1,5 @@
 pkg_name=nodejs_demo
-pkg_origin=chef-training
+pkg_origin=myorigin
 pkg_version="0.2.0"
 pkg_scaffolding="core/scaffolding-node"
 
