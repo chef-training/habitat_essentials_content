@@ -1,5 +1,5 @@
 pkg_name=haproxy_demo
-pkg_origin=chef-training
+pkg_origin=myorigin
 pkg_version="0.1.0"
 pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
 pkg_license=("Apache-2.0")
