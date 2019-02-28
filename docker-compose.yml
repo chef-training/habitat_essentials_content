@@ -1,13 +1,13 @@
 version: '3'
 services:
   nodejs_demo01:
-    image: chef-training/nodejs_demo
+    image: myorigin/nodejs_demo
     command: --group=qa
   nodejs_demo02:
-    image: chef-training/nodejs_demo
+    image: myorigin/nodejs_demo
     command: --group=qa --peer nodejs_demo01
   haproxy:
-    image: chef-training/haproxy_demo
+    image: myorigin/haproxy_demo
     command: --group=qa --bind backend:nodejs_demo.qa --peer nodejs_demo01
     ports:
       - 8085:8085
