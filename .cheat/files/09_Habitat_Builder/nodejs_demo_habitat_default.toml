@@ -1,0 +1,5 @@
+[css]
+background_color = 'purple'
+
+[app]
+port = 8000

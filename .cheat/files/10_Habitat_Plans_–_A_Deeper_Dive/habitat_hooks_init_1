@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ln -vsf {{pkg.svc_config_path}}/conf_server.xml {{pkgPathFor "core/tomcat8"}}/tc/conf/server.xml

@@ -1,0 +1,22 @@
+pkg_name=national-parks
+pkg_origin=<YOUR ORIGIN>
+pkg_version="6.3.0"
+pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
+pkg_license=("Apache-2.0")
+pkg_deps=(core/tomcat8 core/jre8)
+pkg_build_deps=(core/jdk8/8u131 core/maven)
+pkg_svc_user="root"
+do_prepare(){ export JAVA_HOME=$(hab pkg path core/jdk8) ; }
+do_build()
+{
+    cp -r $PLAN_CONTEXT/../ $HAB_CACHE_SRC_PATH/$pkg_dirname
+    cd ${HAB_CACHE_SRC_PATH}/${pkg_dirname}
+    mvn package
+}
+do_install()
+{
+#attach
+    mkdir ${PREFIX}/config
+    cp ${HAB_CACHE_SRC_PATH}/${pkg_dirname}/target/${pkg_name}.war ${PREFIX}/
+    cp $(hab pkg path core/tomcat8)/configure/conf_server.xml ${PREFIX}/config/
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+export JAVA_HOME="{{pkgPathFor "core/jre8"}}"
+export TOMCAT_HOME="{{pkgPathFor "core/tomcat8"}}/tc"
+cp {{pkg.path}}/*.war $TOMCAT_HOME/webapps
+exec ${TOMCAT_HOME}/bin/catalina.sh run
