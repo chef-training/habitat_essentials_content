@@ -1,4 +1,0 @@
-#!/bin/sh
-
-ln -vsf {{pkg.path}}/app/public/stylesheets/style.css {{pkg.svc_config_path}}/style.css  2>&1
-
