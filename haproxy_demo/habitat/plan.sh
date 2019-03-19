@@ -1,5 +1,5 @@
 pkg_name=haproxy_demo
-pkg_origin=myorigin
+pkg_origin=jhn190319
 pkg_version="0.1.0"
 pkg_maintainer="The Habitat Maintainers <humans@habitat.sh>"
 pkg_license=("Apache-2.0")
